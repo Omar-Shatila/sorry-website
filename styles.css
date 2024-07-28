@@ -1,0 +1,88 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 2s ease-in;
+}
+
+h1 {
+    color: #ff6b6b;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #333;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff4d4d;
+}
+
+.hidden {
+    display: none;
+}
+
+#specialMessage {
+    color: #ff6b6b;
+    font-size: 1.8em;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+.heart-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.heart-container .fa-heart {
+    color: #ff6b6b;
+    font-size: 2em;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
